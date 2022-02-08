@@ -26,15 +26,16 @@ export class HeroesComponent implements OnInit {
    */
     this.getHeroes();
   }
+
   /*
     Pega os heroes do service
    */
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
   /*
-    Ao clicar em um hero no html atribui o mesmo ao objeto 
+    Ao clicar em um hero no html atribui o mesmo ao objeto
    */
   onSelect(hero: Hero): void {
     this.selectHero = hero;
