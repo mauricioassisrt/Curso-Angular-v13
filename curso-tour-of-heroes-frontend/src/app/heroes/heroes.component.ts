@@ -10,7 +10,7 @@ import {HEROES} from "../mock-heroes";
 export class HeroesComponent {
 
   //setei atributos no objeto
-  
+
   heroes = HEROES;
   selectHero?: Hero;
 
